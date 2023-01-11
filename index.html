@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        :root {
+            --light-blue: #62b9fc;
+            --white: #ffffff;
+            --gray: #828282;
+            --mid-gray: #bebebe;
+            --light-gray: #cfd1d5;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100%;
+            height: 100%;
+            background-color: #fafafa;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .main-containter {
+            height: 85%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-container {
+            width: 420px;
+            height: 630px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #phone {
+            width: 460px;
+            height: 630px;
+        }
+
+        #screenshot {
+            width: 250px;
+            height: 538px;
+            position: relative;
+            left: 403px;
+            top: 27px;
+        }
+
+        .right-container {
+            width: 350px;
+            height: 630px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .login {
+            width: 350px;
+            height: 400px;
+            background-color: var(--white);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            border: solid var(--mid-gray) 0.5px;
+        }
+
+        #login-form {
+            width: 348px;
+            height: 214px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #text {
+            width: 258px;
+            height: 30px;
+            border: solid var(--mid-gray) 0.5px;
+            border-radius: 3px;
+            background-color: #f9f9f9;
+            font-size: 12px;
+            padding: 5px;
+            margin-bottom: 8px;
+        }
+
+        #log-in-button {
+            background-color: var(--light-blue);
+            border: none;
+            color: var(--white);
+            border-radius: 7px;
+            width: 270px;
+            height: 32px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        #forgot-password {
+            color: #00376b;
+            font-size: 12px;
+            position: relative;
+            top: 27px;
+        }
+
+        .facebook {
+            font-size: 14px;
+            color: #385185;
+            font-weight: 600;
+            position: relative;
+            top: 10px;
+        }
+
+        #facebook {
+            width: 14px;
+            height: 14px;
+            margin-top: 9px;
+            margin-right: 6px;
+        }
+
+        #instagram {
+            width: 200px;
+            height: 60px;
+        }
+
+        .or {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--gray);
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        #line {
+            width: 100px;
+            height: 1px;
+            background-color: var(--light-gray);
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .sign-up {
+            width: 350px;
+            height: 63px;
+            background-color: var(--white);
+            margin-top: 13px;
+            color: #262626;
+            border: solid var(--mid-gray) 0.5px;
+            position: relative;
+            bottom: 19px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .app {
+            position: relative;
+            bottom: 32px;
+        }
+
+        #app-text {
+            position: relative;
+            bottom: 25px;
+            color: #262626;
+        }
+
+        #appstore {
+            width: 136px;
+            height: 40px;
+        }
+
+        #google {
+            width: 134px;
+            height: 40px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 134px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            color: var(--gray);
+
+        }
+
+        a {
+            color: var(--gray);
+            text-decoration: none;
+        }
+
+        #top {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        #bottom {
+            display: flex;
+            gap: 18px;
+        }
+
+        #language {
+            border: none;
+            color: var(--gray);
+            background-color: #fafafa;
+            font-size: 12px;
+        }
+
+        @media screen and (min-width: 414px) {
+            .left-container {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 820px) {
+            .left-container {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            .left-container {
+                display: flex;
+            }
+        }
+    </style>
+    <title>Instagram</title>
+</head>
+
+<body>
+    <div class="main-containter">
+        <div class="left-container">
+            <div>
+                <img id="screenshot" src="img/screenshot.png">
+            </div>
+            <img id="phone" src="https://static.cdninstagram.com/rsrc.php/v3/yr/r/fzBXVxs22bH.png">
+        </div>
+        <div class="right-container">
+            <div class="login">
+                <img id="instagram" src="img/instagram.jpeg" alt="">
+                <div id="login-form">
+                    <input type="text" name="username" id="text" placeholder="Phone number, username, or email">
+                    <input type="password" name="password" id="text" placeholder="Password">
+                    <input id="log-in-button" type="button" value="Log in">
+                    <div class="or">
+                        <div id="line"></div>
+                        OR
+                        <div id="line">
+                        </div>
+                    </div>
+                    <a class="facebook" href=""><img id="facebook" src="img/facebook.png">Log in with Facebook</a>
+                    <a href="" id=forgot-password>Forgot Password?</a>
+                </div>
+            </div>
+            <div class="sign-up">
+                Don't have an account?
+                <a href="" style="color: #0095f6; font-weight: 600;">Sign up</a>
+            </div>
+            <span id="app-text">Get the app.</span>
+            <div class="app">
+                <img id="appstore" src="https://static.cdninstagram.com/rsrc.php/v3/yt/r/Yfc020c87j0.png">
+                <img id="google" src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="top">
+            <a href="">Meta</a>
+            <a href="">About</a>
+            <a href="">Blog</a>
+            <a href="">Jobs</a>
+            <a href="">Help</a>
+            <a href="">API</a>
+            <a href="">Privacy</a>
+            <a href="">Terms</a>
+            <a href="">Top Accounts</a>
+            <a href="">Locations</a>
+            <a href="">Instagram Lite</a>
+            <a href="">Contact Uploading & Non-Users</a>
+
+        </div>
+        <div id="bottom">
+            <select name="language" id="language">
+            <option value="english">English</option>
+            </select>
+            © 2023 Instagram from Meta
+        </div>
+    </div>
+
+
+</body>
+
+</html>
